@@ -1,5 +1,5 @@
 :root {
-  --color-primary: #f55b07;
+  --color-primary: #db5107;
   --color-secondary: #707070;
   --color-bg-dark: #333;
   --color-text-dark: #000;
@@ -11,7 +11,7 @@
 /* Dark theme overrides */
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-primary: #fc7a34;      
+    --color-primary: #db5107;      
     --color-secondary: #bbb;       
     --color-bg-dark: #111;        
     --color-text-dark: #eee;      
@@ -82,12 +82,12 @@ hr {
 }
 
 /* Layout */
-section.center {
+.center {
   display: flex;
   justify-content: center;
-  align-items: center;
   margin: 2rem 0;
 }
+
 section.intro { text-align: center; }
 
 /* Nav */
