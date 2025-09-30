@@ -12,8 +12,8 @@
 /* Dark theme overrides */
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-primary: #db5107;      
-    --color-secondary: #bbb;       
+    --color-primary: #fa9863;      
+    --color-secondary: #ccc;       
     --color-bg-dark: #111;        
     --color-text-dark: #eee;      
     --color-text-light: #fff;      
