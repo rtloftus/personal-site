@@ -11,7 +11,7 @@
 /* Dark theme overrides */
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-primary: #f99863;      
+    --color-primary: #fc7a34;      
     --color-secondary: #bbb;       
     --color-bg-dark: #111;        
     --color-text-dark: #eee;      
@@ -57,6 +57,22 @@ hr {
   border: none;
   border-top: 1px solid var(--color-border);
   margin: 0.5rem 0 1.5rem;
+}
+
+.contact-info {
+  display: grid;
+  grid-template-columns: max-content auto;
+  gap: 0.5rem 1rem;
+}
+
+.contact-info dt {
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+.contact-info dd {
+  margin: 0;
+  color: var(--color-secondary);
 }
 
 /* Layout */
