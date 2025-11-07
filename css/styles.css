@@ -264,3 +264,30 @@ img {
 
   .project-video { max-width: 720px; }
 }
+
+.project-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 0;
+  justify-items: center;
+}
+
+.project-grid li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.project-video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.project-video.vertical {
+  width: 60%;
+  max-width: 360px;
+}
