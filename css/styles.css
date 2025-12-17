@@ -337,3 +337,45 @@ img {
   border-top: 1px solid #e5e7eb;
   text-align: center;
 }
+
+.project-grid.masonry {
+  column-count: 1;
+  column-gap: 24px;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 600px) {
+  .project-grid.masonry {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .project-grid.masonry {
+    column-count: 3;
+  }
+}
+
+.project-grid.masonry li {
+  break-inside: avoid;
+  margin-bottom: 24px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.project-grid.masonry video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-info {
+  padding: 10px 12px;
+  font-size: 0.9rem;
+  background: #f9fafb;
+  border-top: 1px solid #e5e7eb;
+}
