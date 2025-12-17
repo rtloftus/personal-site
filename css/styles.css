@@ -338,44 +338,51 @@ img {
   text-align: center;
 }
 
-.project-grid.masonry {
-  column-count: 1;
-  column-gap: 24px;
-  padding: 0;
+.project-grid {
   list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-auto-flow: row;
+  gap: 24px;
+  padding: 0;
 }
 
-@media (min-width: 600px) {
-  .project-grid.masonry {
-    column-count: 2;
-  }
-}
-
-@media (min-width: 1024px) {
-  .project-grid.masonry {
-    column-count: 3;
-  }
-}
-
-.project-grid.masonry li {
-  break-inside: avoid;
-  margin-bottom: 24px;
+.project-grid li {
   background: #ffffff;
   border: 1px solid #e5e7eb;
   border-radius: 12px;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
   text-align: center;
 }
 
-.project-grid.masonry video {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
+/* caption */
 .project-info {
   padding: 10px 12px;
   font-size: 0.9rem;
   background: #f9fafb;
-  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* horizontal videos */
+.project-video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background: #000;
+}
+
+/* vertical videos */
+.project-video.vertical {
+  aspect-ratio: 9 / 16;
+}
+
+/* make horizontal items span two columns */
+.project-grid li:has(.project-video:not(.vertical)) {
+  grid-column: span 2;
+}
+
+.project-grid {
+  grid-auto-flow: row dense;
 }
